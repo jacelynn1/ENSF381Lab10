@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS 
 import json
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 # create func to read the products data from products.json
 def load_products():
